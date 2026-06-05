@@ -275,6 +275,7 @@ export default function MenuPage() {
           className="container"
           style={{
             display: 'flex',
+            justifyContent: 'center',
             gap: 8,
             overflowX: 'auto',
             paddingBlock: 12,
