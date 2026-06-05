@@ -43,7 +43,7 @@ export default function FestivalsPage() {
           <h1
             className="display"
             style={{
-              fontSize: 'clamp(52px,11vw,140px)',
+              fontSize: 'clamp(60px,11vw,140px)',
               letterSpacing: '.5px',
               maxWidth: '14ch',
               color: 'var(--cream)',
@@ -79,7 +79,7 @@ export default function FestivalsPage() {
             <p className="eyebrow">Why we slap at a festival</p>
             <h2
               className="display"
-              style={{ fontSize: 'clamp(30px,5vw,54px)', color: 'var(--cream)', marginTop: 12 }}
+              style={{ fontSize: 'clamp(38px,5vw,54px)', color: 'var(--cream)', marginTop: 12 }}
             >
               Crowd-pleasers that actually please the crowd.
             </h2>
@@ -128,7 +128,7 @@ export default function FestivalsPage() {
           <p className="eyebrow" style={{ color: '#ffce3a', marginBottom: 12 }}>What rolls up</p>
           <h2
             className="display"
-            style={{ fontSize: 'clamp(30px,5vw,54px)', color: 'var(--cream)', marginBottom: 'clamp(32px,5vw,56px)' }}
+            style={{ fontSize: 'clamp(38px,5vw,54px)', color: 'var(--cream)', marginBottom: 'clamp(32px,5vw,56px)' }}
           >
             The whole rig, ready to feed.
           </h2>
@@ -174,7 +174,7 @@ export default function FestivalsPage() {
           <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 16, marginBottom: 'clamp(24px,4vw,40px)', flexWrap: 'wrap' }}>
             <h2
               className="display"
-              style={{ fontSize: 'clamp(28px,4.5vw,52px)', color: 'var(--cream)' }}
+              style={{ fontSize: 'clamp(36px,4.5vw,52px)', color: 'var(--cream)' }}
             >
               Off the pit
             </h2>
@@ -271,7 +271,7 @@ export default function FestivalsPage() {
 
           <h2
             className="display"
-            style={{ fontSize: 'clamp(30px,5vw,58px)', color: 'var(--char)', marginBottom: 18 }}
+            style={{ fontSize: 'clamp(38px,5vw,58px)', color: 'var(--char)', marginBottom: 18 }}
           >
             Got a festival? Let&apos;s get cooking.
           </h2>

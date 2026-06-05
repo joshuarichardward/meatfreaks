@@ -494,7 +494,7 @@ export default function EnquiryClient() {
           <h1
             style={{
               fontFamily: 'var(--font-display)', textTransform: 'uppercase',
-              fontSize: 'clamp(42px,8vw,96px)', lineHeight: .86,
+              fontSize: 'clamp(50px,8vw,96px)', lineHeight: .86,
               letterSpacing: '.5px', marginTop: 12, maxWidth: '16ch',
             }}
           >

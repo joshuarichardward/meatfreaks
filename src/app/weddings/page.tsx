@@ -23,7 +23,7 @@ export default function WeddingsPage() {
           <h1 style={{
             fontFamily: 'var(--font-serif)',
             fontWeight: 500,
-            fontSize: 'clamp(42px,6vw,82px)',
+            fontSize: 'clamp(50px,6vw,82px)',
             lineHeight: 1.02,
             letterSpacing: 0,
             textTransform: 'none',
@@ -113,7 +113,7 @@ export default function WeddingsPage() {
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '50ch', margin: '0 auto clamp(40px,6vw,68px)' }}>
             <p className="eyebrow">How we cater your day</p>
-            <h2 className="display-serif" style={{ fontSize: 'clamp(30px,4.5vw,52px)', marginTop: 14 }}>
+            <h2 className="display-serif" style={{ fontSize: 'clamp(38px,4.5vw,52px)', marginTop: 14 }}>
               Quietly looked after, start to finish.
             </h2>
           </div>
@@ -263,7 +263,7 @@ export default function WeddingsPage() {
           <h2 style={{
             fontFamily: 'var(--font-serif)',
             fontWeight: 500,
-            fontSize: 'clamp(30px,4.5vw,52px)',
+            fontSize: 'clamp(38px,4.5vw,52px)',
             lineHeight: 1.08,
             marginTop: 16,
             color: '#2a221c',

@@ -24,7 +24,7 @@ export default function Home() {
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(20,14,10,.62) 0%, rgba(20,14,10,.35) 38%, rgba(20,14,10,.9) 100%)' }} />
         <div className="container" style={{ position: 'relative', minHeight: 'clamp(560px,88vh,820px)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingBlock: '48px clamp(40px,6vw,72px)' }}>
           <p className="eyebrow" style={{ color: 'var(--ember)' }}>UK-Wide · Live-Fire BBQ · Any Occasion</p>
-          <h1 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontSize: 'clamp(46px,9.5vw,128px)', lineHeight: '.86', letterSpacing: '.5px', maxWidth: '15ch' }}>
+          <h1 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontSize: 'clamp(56px,9.5vw,128px)', lineHeight: '.86', letterSpacing: '.5px', maxWidth: '15ch' }}>
             Serious BBQ,<br />wherever the <em style={{ fontStyle: 'normal', color: 'var(--ember)' }}>party</em> lands.
           </h1>
           <p style={{ marginTop: 20, fontSize: 'clamp(17px,2.2vw,21px)', maxWidth: '50ch', color: 'rgba(244,234,215,.86)' }}>
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '50ch', margin: '0 auto clamp(28px,5vw,52px)' }}>
             <p className="eyebrow">One pit. Three ways to feast.</p>
-            <h2 className="display" style={{ fontSize: 'clamp(32px,5vw,56px)', letterSpacing: '.5px' }}>
+            <h2 className="display" style={{ fontSize: 'clamp(42px,5vw,56px)', letterSpacing: '.5px' }}>
               What are we <em style={{ fontStyle: 'normal', color: 'var(--ember)' }}>firing up</em> for?
             </h2>
             <p className="lede" style={{ marginTop: 14 }}>Pick your lane, each one&apos;s tuned to your kind of event. Same obsessive BBQ underneath.</p>
@@ -101,7 +101,7 @@ export default function Home() {
           <div className="grid-2">
             <div>
               <p className="eyebrow">The food is the star</p>
-              <h2 className="display" style={{ fontSize: 'clamp(34px,5vw,60px)', margin: '12px 0 18px' }}>Low &amp; slow,<br />done properly.</h2>
+              <h2 className="display" style={{ fontSize: 'clamp(42px,5vw,60px)', margin: '12px 0 18px' }}>Low &amp; slow,<br />done properly.</h2>
               <p style={{ color: 'rgba(244,234,215,.82)', maxWidth: '46ch' }}>Charcoal and smoke, hours of patience, and a menu built for sharing. Here&apos;s a taste of what comes off the pit.</p>
               <div className="teaser-list" style={{ columns: 2, columnGap: 42, marginTop: 28 }}>
                 {[
@@ -154,7 +154,7 @@ export default function Home() {
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>
             <div>
               <p className="eyebrow">See it, smell it (almost)</p>
-              <h2 className="display" style={{ fontSize: 'clamp(30px,4.5vw,52px)', marginTop: 10 }}>Follow the smoke<br />on Instagram</h2>
+              <h2 className="display" style={{ fontSize: 'clamp(38px,4.5vw,52px)', marginTop: 10 }}>Follow the smoke<br />on Instagram</h2>
             </div>
             <a className="btn btn-dark" href="https://www.instagram.com/meatfreaks1/" target="_blank" rel="noopener">@meatfreaks1 <span className="arr">→</span></a>
           </div>

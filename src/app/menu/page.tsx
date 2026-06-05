@@ -214,7 +214,7 @@ export default function MenuPage() {
           </p>
           <h1
             className="display"
-            style={{ fontSize: 'clamp(52px,10vw,112px)', color: 'var(--cream)', maxWidth: '14ch' }}
+            style={{ fontSize: 'clamp(60px,10vw,112px)', color: 'var(--cream)', maxWidth: '14ch' }}
           >
             The{' '}
             <em style={{ fontStyle: 'normal', color: 'var(--ember)' }}>Menu</em>
@@ -332,7 +332,7 @@ export default function MenuPage() {
                 </p>
                 <h2
                   className="display"
-                  style={{ fontSize: 'clamp(32px,5vw,52px)', color: 'var(--char)' }}
+                  style={{ fontSize: 'clamp(40px,5vw,52px)', color: 'var(--char)' }}
                 >
                   {cat.title}
                 </h2>
@@ -377,7 +377,7 @@ export default function MenuPage() {
         </p>
         <h2
           className="display"
-          style={{ fontSize: 'clamp(36px,7vw,84px)', color: 'var(--cream)', maxWidth: '16ch', marginInline: 'auto' }}
+          style={{ fontSize: 'clamp(44px,7vw,84px)', color: 'var(--cream)', maxWidth: '16ch', marginInline: 'auto' }}
         >
           Let&apos;s build your menu.
         </h2>

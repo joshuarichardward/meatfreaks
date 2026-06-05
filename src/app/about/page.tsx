@@ -37,7 +37,7 @@ export default function About() {
             style={{
               fontFamily: 'var(--font-display)',
               textTransform: 'uppercase',
-              fontSize: 'clamp(48px,11vw,128px)',
+              fontSize: 'clamp(56px,11vw,128px)',
               lineHeight: '.86',
               letterSpacing: '.5px',
             }}
@@ -70,7 +70,7 @@ export default function About() {
               className="display"
               style={{
                 color: 'var(--ember)',
-                fontSize: 'clamp(28px,5vw,52px)',
+                fontSize: 'clamp(36px,5vw,52px)',
                 lineHeight: '.95',
                 margin: '32px 0',
               }}
@@ -132,7 +132,7 @@ export default function About() {
           <h2
             className="display"
             style={{
-              fontSize: 'clamp(30px,4.5vw,54px)',
+              fontSize: 'clamp(38px,4.5vw,54px)',
               maxWidth: '18ch',
               marginBottom: 'clamp(36px,5vw,56px)',
             }}
@@ -229,7 +229,7 @@ export default function About() {
             {/* right: copy */}
             <div>
               <p className="eyebrow" style={{ marginBottom: 14 }}>The crew</p>
-              <h2 className="display" style={{ fontSize: 'clamp(28px,4vw,46px)', marginBottom: 20 }}>
+              <h2 className="display" style={{ fontSize: 'clamp(36px,4vw,46px)', marginBottom: 20 }}>
                 Led by Andy, fired by the team.
               </h2>
               <p className="muted" style={{ maxWidth: '42ch', lineHeight: 1.7 }}>
@@ -252,7 +252,7 @@ export default function About() {
           padding: 'clamp(56px,9vw,120px) 22px',
         }}
       >
-        <h2 className="display" style={{ fontSize: 'clamp(30px,5vw,60px)', marginBottom: 20 }}>
+        <h2 className="display" style={{ fontSize: 'clamp(38px,5vw,60px)', marginBottom: 20 }}>
           Hungry yet?
         </h2>
         <p style={{ fontWeight: 600, fontSize: 18, maxWidth: '40ch', marginInline: 'auto', marginBottom: 32 }}>

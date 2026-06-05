@@ -36,7 +36,7 @@ export default function ContactPage() {
             style={{
               fontFamily:    'var(--font-display)',
               textTransform: 'uppercase',
-              fontSize:      'clamp(52px,12vw,140px)',
+              fontSize:      'clamp(60px,12vw,140px)',
               lineHeight:    '.86',
               letterSpacing: '.5px',
               marginTop:     12,
@@ -268,7 +268,7 @@ export default function ContactPage() {
               <h2
                 className="display"
                 style={{
-                  fontSize:  'clamp(30px,4.5vw,54px)',
+                  fontSize:  'clamp(38px,4.5vw,54px)',
                   marginTop: 8,
                   color:     'var(--cream)',
                 }}
