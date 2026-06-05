@@ -142,6 +142,7 @@ export default function About() {
 
           {/* 3-col grid */}
           <div
+            className="values-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3,1fr)',

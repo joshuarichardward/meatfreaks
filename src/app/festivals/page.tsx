@@ -85,7 +85,7 @@ export default function FestivalsPage() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 2 }}>
+          <div className="why-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 2 }}>
             {/* Card 01 */}
             <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)' }}>
               <p style={{ fontFamily: 'var(--font-display)', fontSize: 48, color: 'var(--ember)', lineHeight: 1, marginBottom: 16, letterSpacing: '.5px' }}>01</p>
@@ -189,9 +189,9 @@ export default function FestivalsPage() {
           </div>
 
           {/* 4-col CSS grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: '220px', gap: 4 }}>
+          <div className="fest-gallery">
             {/* arch-action.jpg — wide (2 cols) + tall (2 rows) */}
-            <div style={{ position: 'relative', gridColumn: 'span 2', gridRow: 'span 2', borderRadius: 'var(--r)', overflow: 'hidden' }}>
+            <div className="wide tall" style={{ position: 'relative', borderRadius: 'var(--r)', overflow: 'hidden' }}>
               <Image
                 src="/assets/arch-action.jpg"
                 alt="Live action at the Meat Freaks arch"
@@ -235,7 +235,7 @@ export default function FestivalsPage() {
             </div>
 
             {/* fire-logs.jpg — wide (2 cols) */}
-            <div style={{ position: 'relative', gridColumn: 'span 2', borderRadius: 'var(--r)', overflow: 'hidden' }}>
+            <div className="wide" style={{ position: 'relative', borderRadius: 'var(--r)', overflow: 'hidden' }}>
               <Image
                 src="/assets/fire-logs.jpg"
                 alt="Burning logs in the fire box"

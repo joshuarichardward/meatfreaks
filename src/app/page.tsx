@@ -103,7 +103,7 @@ export default function Home() {
               <p className="eyebrow">The food is the star</p>
               <h2 className="display" style={{ fontSize: 'clamp(34px,5vw,60px)', margin: '12px 0 18px' }}>Low &amp; slow,<br />done properly.</h2>
               <p style={{ color: 'rgba(244,234,215,.82)', maxWidth: '46ch' }}>Charcoal and smoke, hours of patience, and a menu built for sharing. Here&apos;s a taste of what comes off the pit.</p>
-              <div style={{ columns: 2, columnGap: 42, marginTop: 28 }}>
+              <div className="teaser-list" style={{ columns: 2, columnGap: 42, marginTop: 28 }}>
                 {[
                   { name: '12-Hour Brisket', sub: 'Salt, pepper, oak smoke' },
                   { name: 'Pulled Pork Shoulder', sub: 'Apple-smoked, hand-pulled' },
@@ -128,7 +128,7 @@ export default function Home() {
       {/* SOCIAL PROOF */}
       <section className="section" style={{ background: 'var(--ember)', color: 'var(--char)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 30, textAlign: 'center' }}>
+          <div className="proof-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 30, textAlign: 'center' }}>
             {[
               { n: 'UK-Wide', l: 'Coverage, every postcode' },
               { n: '30+', l: 'Events catered' },
@@ -158,7 +158,7 @@ export default function Home() {
             </div>
             <a className="btn btn-dark" href="https://www.instagram.com/meatfreaks1/" target="_blank" rel="noopener">@meatfreaks1 <span className="arr">→</span></a>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 8, marginTop: 30 }}>
+          <div className="insta-grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 8, marginTop: 30 }}>
             {[
               { src: '/assets/stall-soldout.jpg', alt: 'Meat Freaks market stall sold out' },
               { src: '/assets/food-rosemary.jpg', alt: 'Smoked joint with rosemary' },

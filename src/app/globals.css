@@ -352,5 +352,30 @@ p { margin: 0; }
 /* Utility */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
 @media (max-width: 820px) { .grid-2 { grid-template-columns: 1fr; } }
+/* Responsive: Home proof grid */
+@media (max-width: 620px) {
+  .proof-grid { grid-template-columns: 1fr !important; }
+  .insta-grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  .teaser-list { columns: 1 !important; }
+}
+
+/* Responsive: Festivals gallery */
+.fest-gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; gap: 8px; }
+.fest-gallery .tall { grid-row: span 2; }
+.fest-gallery .wide { grid-column: span 2; }
+@media (max-width: 760px) {
+  .fest-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+}
+
+/* Responsive: Festivals why grid */
+@media (max-width: 760px) {
+  .why-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Responsive: About values grid */
+@media (max-width: 760px) {
+  .values-grid { grid-template-columns: 1fr !important; }
+}
+
 .muted { color: var(--muted); }
 .hidden { display: none !important; }
