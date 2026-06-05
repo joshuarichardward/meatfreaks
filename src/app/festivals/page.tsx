@@ -69,6 +69,8 @@ export default function FestivalsPage() {
         <div className="track">
           <span>Low &amp; Slow <b>★</b> Big Crowds <b>★</b> Real Fire <b>★</b> Street Food <b>★</b> Brisket Mountains <b>★</b>&nbsp;</span>
           <span>Low &amp; Slow <b>★</b> Big Crowds <b>★</b> Real Fire <b>★</b> Street Food <b>★</b> Brisket Mountains <b>★</b>&nbsp;</span>
+          <span>Low &amp; Slow <b>★</b> Big Crowds <b>★</b> Real Fire <b>★</b> Street Food <b>★</b> Brisket Mountains <b>★</b>&nbsp;</span>
+          <span>Low &amp; Slow <b>★</b> Big Crowds <b>★</b> Real Fire <b>★</b> Street Food <b>★</b> Brisket Mountains <b>★</b>&nbsp;</span>
         </div>
       </div>
 
