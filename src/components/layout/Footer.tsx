@@ -36,7 +36,11 @@ export function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Meat Freaks Ltd. All rights reserved.</span>
-          <span>UK-wide BBQ event catering</span>
+          <span style={{ display: 'flex', gap: '8px 18px', flexWrap: 'wrap' }}>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+            <Link href="/cookies">Cookies</Link>
+          </span>
         </div>
       </div>
     </footer>
