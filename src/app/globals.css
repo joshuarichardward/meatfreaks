@@ -96,7 +96,7 @@ p { margin: 0; }
 .btn-dark { background: var(--char); color: var(--cream); border-color: var(--char); }
 .btn-dark:hover { background: #000; }
 .btn-ghost { background: transparent; color: currentColor; border-color: currentColor; }
-.btn-ghost:hover { background: currentColor; }
+.btn-ghost:hover { background: var(--cream); color: var(--char); border-color: var(--cream); }
 .btn-lg { font-size: 17px; padding: 18px 32px; min-height: 56px; }
 .btn .arr { transition: transform .15s ease; }
 .btn:hover .arr { transform: translateX(3px); }
@@ -375,6 +375,58 @@ p { margin: 0; }
 /* Responsive: About values grid */
 @media (max-width: 760px) {
   .values-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Micro-interactions: buttons */
+.btn {
+  transition: transform .15s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Micro-interactions: gallery images */
+.ph img {
+  transition: transform .4s ease, filter .4s ease;
+}
+.ph:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.06);
+}
+
+/* Micro-interactions: footer links */
+.footer-grid a {
+  position: relative;
+}
+.footer-grid ul a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--ember);
+  transition: width .3s ease;
+}
+.footer-grid ul a:hover::after {
+  width: 100%;
 }
 
 .muted { color: var(--muted); }

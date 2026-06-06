@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ScrollReveal } from '@/components/ui/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Meat Freaks - UK-Wide BBQ Event Catering',
@@ -48,13 +49,13 @@ export default function Home() {
       {/* THREE-WAY LANE SPLIT */}
       <section className="section" id="choose" style={{ paddingBottom: 'clamp(32px,5vw,56px)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '50ch', margin: '0 auto clamp(28px,5vw,52px)' }}>
+          <ScrollReveal style={{ textAlign: 'center', maxWidth: '50ch', margin: '0 auto clamp(28px,5vw,52px)' }}>
             <p className="eyebrow">One pit. Three ways to feast.</p>
             <h2 className="display" style={{ fontSize: 'clamp(42px,5vw,56px)', letterSpacing: '.5px' }}>
               What are we <em style={{ fontStyle: 'normal', color: 'var(--ember)' }}>firing up</em> for?
             </h2>
             <p className="lede" style={{ marginTop: 14 }}>Pick your lane, each one&apos;s tuned to your kind of event. Same obsessive BBQ underneath.</p>
-          </div>
+          </ScrollReveal>
         </div>
         <div className="container" style={{ maxWidth: 1240 }}>
           <div className="lanes">
@@ -99,7 +100,7 @@ export default function Home() {
       <section className="section" style={{ background: 'var(--char)', color: 'var(--cream)' }}>
         <div className="container">
           <div className="grid-2">
-            <div>
+            <ScrollReveal>
               <p className="eyebrow">The food is the star</p>
               <h2 className="display" style={{ fontSize: 'clamp(42px,5vw,60px)', margin: '12px 0 18px' }}>Low &amp; slow,<br />done properly.</h2>
               <p style={{ color: 'rgba(244,234,215,.82)', maxWidth: '46ch' }}>Charcoal and smoke, hours of patience, and a menu built for sharing. Here&apos;s a taste of what comes off the pit.</p>
@@ -117,7 +118,7 @@ export default function Home() {
                 ))}
               </div>
               <Link className="btn btn-primary" href="/menu" style={{ marginTop: 30 }}>Full menu <span className="arr">→</span></Link>
-            </div>
+            </ScrollReveal>
             <div style={{ position: 'relative', aspectRatio: '4/5' }}>
               <Image src="/assets/food-ribs.jpg" alt="Racks of ribs smoking low and slow" fill sizes="(max-width:820px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
             </div>
@@ -133,11 +134,11 @@ export default function Home() {
               { n: 'UK-Wide', l: 'Coverage, every postcode' },
               { n: '30+', l: 'Events catered' },
               { n: '10–2,000', l: 'Guests, no sweat' },
-            ].map(stat => (
-              <div key={stat.n}>
+            ].map((stat, i) => (
+              <ScrollReveal key={stat.n} delay={i * 100}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(44px,7vw,76px)', lineHeight: '.9' }}>{stat.n}</div>
                 <div style={{ fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.1em', fontSize: 13, marginTop: 8 }}>{stat.l}</div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
           <hr style={{ background: 'rgba(27,21,17,.2)', margin: '46px 0', border: 0, height: 1 }} />
@@ -151,13 +152,13 @@ export default function Home() {
       {/* INSTAGRAM */}
       <section className="section" style={{ background: 'var(--bone)' }}>
         <div className="container">
-          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>
+          <ScrollReveal style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>
             <div>
               <p className="eyebrow">See it, smell it (almost)</p>
               <h2 className="display" style={{ fontSize: 'clamp(38px,4.5vw,52px)', marginTop: 10 }}>Follow the smoke<br />on Instagram</h2>
             </div>
             <a className="btn btn-dark" href="https://www.instagram.com/meatfreaks1/" target="_blank" rel="noopener">@meatfreaks1 <span className="arr">→</span></a>
-          </div>
+          </ScrollReveal>
           <div className="insta-grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 8, marginTop: 30 }}>
             {[
               { src: '/assets/stall-soldout.jpg', alt: 'Meat Freaks market stall sold out' },
