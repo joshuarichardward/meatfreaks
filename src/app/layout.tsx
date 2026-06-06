@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import { Anton, Archivo, Cormorant } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
 import './globals.css'
 
 const anton = Anton({ weight: '400', subsets: ['latin'], variable: '--font-anton' })
@@ -60,9 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <Header />
         {children}
-        <Footer />
         <Analytics />
         <SpeedInsights />
       </body>
