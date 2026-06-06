@@ -410,8 +410,8 @@ export default function AdminDashboard() {
 
   /* ── Logout ───────────────────────────────────────────────────────── */
 
-  function handleLogout() {
-    document.cookie = 'mf-admin-token=; path=/; max-age=0'
+  async function handleLogout() {
+    await fetch('/api/admin/logout', { method: 'POST' })
     router.replace('/admin')
   }
 
