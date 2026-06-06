@@ -19,7 +19,14 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  const { email } = await request.json()
+  let body: Record<string, unknown>
+  try {
+    body = await request.json()
+  } catch {
+    return NextResponse.json({ message: 'If that email is authorised, a login link has been sent.' })
+  }
+
+  const email = typeof body.email === 'string' ? body.email.trim() : ''
 
   if (isAdminEmail(email)) {
     const jwt = await createMagicLinkToken(email)
