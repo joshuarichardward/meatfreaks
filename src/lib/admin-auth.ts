@@ -58,7 +58,7 @@ export function sessionCookieOptions(token: string) {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax' as const,
-    path: '/admin',
+    path: '/',
     maxAge: SEVEN_DAYS,
   }
 }
@@ -70,7 +70,7 @@ export function clearSessionCookie() {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax' as const,
-    path: '/admin',
+    path: '/',
     maxAge: 0,
   }
 }
