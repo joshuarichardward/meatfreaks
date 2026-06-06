@@ -143,7 +143,7 @@ export default function FestivalsPage() {
                 'Branded servery & gazebo festival-ready',
                 'Crew to cook plate and serve at pace',
                 'Menu tailored to your crowd & footfall',
-                'Veggie & dietary options as standard',
+                'Dietary requirements accommodated where possible',
               ].map((item, i) => (
                 <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 18 }}>
                   <span style={{ fontFamily: 'var(--font-display)', fontSize: 32, color: '#ffce3a', lineHeight: 1, minWidth: 44, letterSpacing: '.5px' }}>

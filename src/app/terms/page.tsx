@@ -55,7 +55,7 @@ export default function TermsPage() {
 
             <h2 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontSize: 'clamp(22px,3vw,28px)', letterSpacing: '.5px', marginBottom: 14 }}>6. Menu and dietary requirements</h2>
             <p style={{ marginBottom: 28 }}>
-              Final menu selections and confirmed guest numbers must be agreed at least 7 days before your event. We accommodate dietary requirements including vegetarian, vegan and common allergens wherever possible. It is your responsibility to inform us of any dietary needs or allergies among your guests. While we take every reasonable precaution, our food is prepared in an environment where allergens are present and we cannot guarantee a completely allergen-free service.
+              Final menu selections and confirmed guest numbers must be agreed at least 7 days before your event. We will do our best to accommodate dietary requirements and common allergens where possible. It is your responsibility to inform us of any dietary needs or allergies among your guests. While we take every reasonable precaution, our food is prepared in an environment where allergens are present and we cannot guarantee a completely allergen-free service.
             </p>
 
             <h2 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontSize: 'clamp(22px,3vw,28px)', letterSpacing: '.5px', marginBottom: 14 }}>7. Event requirements</h2>

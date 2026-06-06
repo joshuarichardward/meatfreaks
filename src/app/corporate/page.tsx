@@ -233,7 +233,7 @@ export default function CorporatePage() {
                 { title: 'Client & corporate hospitality', sub: 'Premium menus that impress' },
                 { title: 'Staff parties & celebrations', sub: 'Summer socials to year-end dos' },
                 { title: 'Recurring & repeat events', sub: 'Preferred-supplier arrangements' },
-                { title: 'Dietary & allergen managed', sub: 'Full labelling, veggie & vegan options' },
+                { title: 'Dietary & allergen managed', sub: 'Full labelling, requirements accommodated' },
                 { title: 'Invoicing & paperwork', sub: 'RAMS, insurance & PO-friendly billing' },
               ].map(item => (
                 <div key={item.title} style={{

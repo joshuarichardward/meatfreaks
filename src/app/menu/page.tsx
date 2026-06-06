@@ -18,17 +18,17 @@ const categories = [
       {
         name: '12-Hour Brisket',
         flag: { label: 'Signature', cls: 'sig' },
-        tags: 'GF',
+
         desc: 'Oak-smoked overnight, peppery bark, deep smoke ring. Sliced fresh in front of you.',
       },
       {
         name: 'Pulled Pork Shoulder',
-        tags: 'GF',
+
         desc: 'Apple-smoked and hand-pulled, finished with our house rub and a splash of vinegar sauce.',
       },
       {
         name: 'Beef Short Rib',
-        tags: 'GF',
+
         desc: 'Single giant rib, low and slow until it gives way at a touch. A proper showpiece.',
       },
       {
@@ -43,7 +43,7 @@ const categories = [
       },
       {
         name: 'Smoked Half Chicken',
-        tags: 'GF',
+
         desc: 'Brined, rubbed and charcoal-finished for crisp skin and juicy everything.',
       },
     ],
@@ -81,27 +81,27 @@ const categories = [
     items: [
       {
         name: 'Smoked Mac & Cheese',
-        tags: 'V',
+
         desc: 'Three-cheese, smoked on the pit, crisp golden top.',
       },
       {
         name: 'House Slaw',
-        tags: 'V · GF',
+
         desc: 'Apple and fennel, sharp and fresh to cut the richness.',
       },
       {
         name: 'Pit Beans',
         flag: { label: 'Signature', cls: 'sig' },
-        desc: "The pitmaster's secret recipe. We don't talk about what goes in — we just know they never come back.",
+        desc: "The pitmaster's secret recipe. We don't talk about what goes in. We just know you'll come back for more.",
       },
       {
         name: 'Honey-Butter Cornbread',
-        tags: 'V',
+
         desc: 'Warm, soft, brushed with honey butter.',
       },
       {
         name: 'Streetcorn',
-        tags: 'V · GF',
+
         desc: "Served with Harry J's marinade.",
       },
     ],
@@ -337,7 +337,6 @@ export default function MenuPage() {
                         </span>
                       )}
                     </h4>
-                    {'tags' in item && item.tags && <span className="mtag">{item.tags}</span>}
                     <p className="desc">{item.desc}</p>
                   </div>
                 ))}
