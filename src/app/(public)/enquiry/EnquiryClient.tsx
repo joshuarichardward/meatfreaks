@@ -759,7 +759,7 @@ export default function EnquiryClient() {
           }
           .enq-layout aside {
             position: static !important;
-            order: -1;
+            order: 1;
           }
         }
       `}</style>
