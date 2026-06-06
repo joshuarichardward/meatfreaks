@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { EnquiryPayload } from '@/lib/types'
-import { storeSubmission } from '@/lib/availability'
+import { storeEnquiry } from '@/lib/availability'
 import { sendOwnerEmail, sendClientEmail } from '@/lib/mailer'
 
 export async function POST(req: Request) {
@@ -10,7 +10,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
   }
 
-  storeSubmission(payload as unknown as Record<string, unknown>)
+  const stored = {
+    ...payload,
+    id: `enq_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+  }
+
+  await storeEnquiry(stored)
 
   try {
     await sendOwnerEmail(payload)
