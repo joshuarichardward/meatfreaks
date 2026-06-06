@@ -13,21 +13,33 @@ export async function POST(request: NextRequest) {
 
   if (isAdminEmail(email)) {
     const jwt = await createMagicLinkToken(email)
-    const loginUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/admin/auth?token=${jwt}`
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.meatfreaksltd.com'
+    const loginUrl = `${siteUrl}/api/admin/auth?token=${jwt}`
 
     const { Resend } = await import('resend')
     const resend = new Resend(process.env.RESEND_API_KEY)
 
-    await resend.emails.send({
-      from: `Meat Freaks <noreply@${process.env.NEXT_PUBLIC_SITE_URL?.replace(/https?:\/\//, '')}>`,
-      to: email,
-      subject: 'Your Meat Freaks admin login link',
-      html: `
-        <p>Hi Andy,</p>
-        <p>Here's your login link — it expires in 15 minutes:</p>
-        <p><a href="${loginUrl}">${loginUrl}</a></p>
-      `,
-    })
+    try {
+      const result = await resend.emails.send({
+        from: process.env.EMAIL_FROM || 'noreply@meatfreaksltd.com',
+        to: email,
+        subject: 'Your Meat Freaks admin login link',
+        text: [
+          'Hi Andy,',
+          '',
+          "Here's your login link for the Meat Freaks admin dashboard:",
+          '',
+          loginUrl,
+          '',
+          "This link expires in 15 minutes. If you didn't request this, you can ignore this email.",
+          '',
+          'Meat Freaks',
+        ].join('\n'),
+      })
+      console.log('Magic link email result:', JSON.stringify(result))
+    } catch (err) {
+      console.error('Failed to send magic link email:', err)
+    }
   }
 
   return NextResponse.json({ message: 'If that email is authorised, a login link has been sent.' })
