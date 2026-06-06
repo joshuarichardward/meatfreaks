@@ -237,6 +237,7 @@ export default function WeddingsPage() {
                 borderRadius: 10,
                 padding: 'clamp(28px,3.2vw,46px)',
                 background: 'rgba(244,234,215,.035)',
+                height: '100%',
               }}>
                 <p style={{
                   fontFamily: 'var(--font-serif)',
