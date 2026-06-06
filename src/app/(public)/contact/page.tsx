@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ScrollReveal } from '@/components/ui/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Contact & Social',
@@ -111,6 +112,7 @@ export default function ContactPage() {
           >
             {/* Card wrapper style */}
             {/* ── Email ── */}
+            <ScrollReveal delay={0}>
             <div
               style={{
                 border:       '1.5px solid var(--line)',
@@ -150,8 +152,10 @@ export default function ContactPage() {
                 Best for detailed enquiries &amp; quotes.
               </p>
             </div>
+            </ScrollReveal>
 
             {/* ── Phone ── */}
+            <ScrollReveal delay={100}>
             <div
               style={{
                 border:       '1.5px solid var(--line)',
@@ -192,8 +196,10 @@ export default function ContactPage() {
                 Call or text, we&apos;re often by the pit.
               </p>
             </div>
+            </ScrollReveal>
 
             {/* ── Instagram ── */}
+            <ScrollReveal delay={200}>
             <div
               style={{
                 border:       '1.5px solid var(--line)',
@@ -234,6 +240,7 @@ export default function ContactPage() {
                 See the latest cooks &amp; events.
               </p>
             </div>
+            </ScrollReveal>
           </div>
 
           {/* Enquiry CTA */}
@@ -252,6 +259,7 @@ export default function ContactPage() {
       <section style={{ background: 'var(--char)', color: 'var(--cream)', paddingBlock: 'clamp(48px,7vw,96px)' }}>
         <div className="container">
           {/* Header row */}
+          <ScrollReveal>
           <div
             style={{
               display:        'flex',
@@ -286,6 +294,7 @@ export default function ContactPage() {
               Open Instagram →
             </a>
           </div>
+          </ScrollReveal>
 
           {/* 6-col image grid */}
           <div

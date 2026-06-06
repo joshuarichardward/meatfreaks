@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ScrollReveal } from '@/components/ui/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Corporate & Event BBQ Catering',
@@ -107,22 +108,22 @@ export default function CorporatePage() {
       <section style={{ paddingBlock: 'clamp(40px,5vw,64px)' }}>
         <div className="container">
           <div className="stat-grid">
-            <div className="stat">
-              <div className="n">UK-Wide</div>
-              <div className="l">On-site anywhere, every region</div>
-            </div>
-            <div className="stat">
-              <div className="n">10–2,000</div>
-              <div className="l">Guests catered per event</div>
-            </div>
-            <div className="stat">
-              <div className="n">30+</div>
-              <div className="l">Events delivered</div>
-            </div>
-            <div className="stat">
-              <div className="n" dangerouslySetInnerHTML={{ __html: 'Fully<br>insured' }} />
-              <div className="l">PL cover &amp; Level 2 food hygiene</div>
-            </div>
+            {[
+              { n: 'UK-Wide', l: 'On-site anywhere, every region' },
+              { n: '10–2,000', l: 'Guests catered per event' },
+              { n: '30+', l: 'Events delivered' },
+              { n: 'Fully<br>insured', l: 'PL cover & Level 2 food hygiene', html: true },
+            ].map((stat, i) => (
+              <ScrollReveal key={stat.n} delay={i * 100}>
+                <div className="stat">
+                  {stat.html
+                    ? <div className="n" dangerouslySetInnerHTML={{ __html: stat.n }} />
+                    : <div className="n">{stat.n}</div>
+                  }
+                  <div className="l">{stat.l}</div>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
@@ -130,20 +131,22 @@ export default function CorporatePage() {
       {/* ── HOW IT WORKS ── */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
-          <p className="eyebrow">How it works</p>
-          <h2 style={{
-            fontFamily: 'var(--font-sans)',
-            fontWeight: 800,
-            textTransform: 'none',
-            letterSpacing: '-.02em',
-            fontSize: 'clamp(36px,4vw,48px)',
-            lineHeight: 1.06,
-            color: '#1a1f26',
-            margin: '14px 0 40px',
-            maxWidth: '28ch',
-          }}>
-            Booked, briefed and delivered, without the back-and-forth.
-          </h2>
+          <ScrollReveal>
+            <p className="eyebrow">How it works</p>
+            <h2 style={{
+              fontFamily: 'var(--font-sans)',
+              fontWeight: 800,
+              textTransform: 'none',
+              letterSpacing: '-.02em',
+              fontSize: 'clamp(36px,4vw,48px)',
+              lineHeight: 1.06,
+              color: '#1a1f26',
+              margin: '14px 0 40px',
+              maxWidth: '28ch',
+            }}>
+              Booked, briefed and delivered, without the back-and-forth.
+            </h2>
+          </ScrollReveal>
 
           <div className="corp-steps-grid">
             {[
@@ -162,36 +165,38 @@ export default function CorporatePage() {
                 title: 'Cooked on the day',
                 body: "We arrive self-contained, cook on-site and serve to schedule, then clear down cleanly. You run your event, we run the food.",
               },
-            ].map(card => (
-              <div key={card.step} style={{
-                background: '#fff',
-                border: '1px solid #e6e9ee',
-                borderRadius: 8,
-                padding: 'clamp(22px,3vw,36px)',
-              }}>
-                {/* Accent bar — replaces ::before pseudo-element */}
-                <div style={{ width: 44, height: 3, background: '#1f3a5f', marginBottom: 20 }} />
-                <p style={{
-                  fontWeight: 700,
-                  fontSize: 12,
-                  letterSpacing: '.18em',
-                  textTransform: 'uppercase',
-                  color: '#1f3a5f',
-                  marginBottom: 10,
+            ].map((card, i) => (
+              <ScrollReveal key={card.step} delay={i * 100}>
+                <div style={{
+                  background: '#fff',
+                  border: '1px solid #e6e9ee',
+                  borderRadius: 8,
+                  padding: 'clamp(22px,3vw,36px)',
                 }}>
-                  {card.step}
-                </p>
-                <h3 style={{
-                  fontFamily: 'var(--font-sans)',
-                  fontWeight: 800,
-                  fontSize: 20,
-                  color: '#1a1f26',
-                  marginBottom: 12,
-                }}>
-                  {card.title}
-                </h3>
-                <p style={{ color: '#56606e', fontSize: 15, lineHeight: 1.6 }}>{card.body}</p>
-              </div>
+                  {/* Accent bar — replaces ::before pseudo-element */}
+                  <div style={{ width: 44, height: 3, background: '#1f3a5f', marginBottom: 20 }} />
+                  <p style={{
+                    fontWeight: 700,
+                    fontSize: 12,
+                    letterSpacing: '.18em',
+                    textTransform: 'uppercase',
+                    color: '#1f3a5f',
+                    marginBottom: 10,
+                  }}>
+                    {card.step}
+                  </p>
+                  <h3 style={{
+                    fontFamily: 'var(--font-sans)',
+                    fontWeight: 800,
+                    fontSize: 20,
+                    color: '#1a1f26',
+                    marginBottom: 12,
+                  }}>
+                    {card.title}
+                  </h3>
+                  <p style={{ color: '#56606e', fontSize: 15, lineHeight: 1.6 }}>{card.body}</p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -202,29 +207,31 @@ export default function CorporatePage() {
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'start' }}>
             {/* Left */}
-            <div>
-              <p className="eyebrow" style={{ color: '#7fb0e8' }}>Built for business events</p>
-              <h2 style={{
-                fontFamily: 'var(--font-sans)',
-                fontWeight: 800,
-                textTransform: 'none',
-                letterSpacing: '-.02em',
-                fontSize: 'clamp(36px,4vw,48px)',
-                lineHeight: 1.06,
-                color: '#eef2f7',
-                margin: '14px 0 22px',
-              }}>
-                Reliability is the whole point.
-              </h2>
-              <p style={{
-                color: 'rgba(238,242,247,.72)',
-                fontSize: 'clamp(16px,2vw,18px)',
-                lineHeight: 1.6,
-                maxWidth: '42ch',
-              }}>
-                We&apos;ve built our operation around the demands of professional events - consistent quality, clear communication and zero drama on the day.
-              </p>
-            </div>
+            <ScrollReveal>
+              <div>
+                <p className="eyebrow" style={{ color: '#7fb0e8' }}>Built for business events</p>
+                <h2 style={{
+                  fontFamily: 'var(--font-sans)',
+                  fontWeight: 800,
+                  textTransform: 'none',
+                  letterSpacing: '-.02em',
+                  fontSize: 'clamp(36px,4vw,48px)',
+                  lineHeight: 1.06,
+                  color: '#eef2f7',
+                  margin: '14px 0 22px',
+                }}>
+                  Reliability is the whole point.
+                </h2>
+                <p style={{
+                  color: 'rgba(238,242,247,.72)',
+                  fontSize: 'clamp(16px,2vw,18px)',
+                  lineHeight: 1.6,
+                  maxWidth: '42ch',
+                }}>
+                  We&apos;ve built our operation around the demands of professional events - consistent quality, clear communication and zero drama on the day.
+                </p>
+              </div>
+            </ScrollReveal>
 
             {/* Right — capability grid */}
             <div className="corp-cap-grid">
@@ -272,7 +279,8 @@ export default function CorporatePage() {
       {/* ── TESTIMONIAL ── */}
       <section className="section">
         <div className="container">
-          <div style={{ maxWidth: 840, marginInline: 'auto' }}>
+          <ScrollReveal>
+            <div style={{ maxWidth: 840, marginInline: 'auto' }}>
             <div style={{
               background: '#fff',
               border: '1px solid #e6e9ee',
@@ -312,45 +320,48 @@ export default function CorporatePage() {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── CTA BAND ── */}
       <section className="section" style={{ background: '#1f3a5f', color: '#fff' }}>
         <div className="container">
-          <div className="corp-cta-grid">
-            <div>
-              <h2 style={{
-                fontFamily: 'var(--font-sans)',
-                fontWeight: 800,
-                letterSpacing: '-.02em',
-                fontSize: 'clamp(34px,3.8vw,44px)',
-                lineHeight: 1.1,
-                color: '#fff',
-                marginBottom: 16,
-              }}>
-                Planning a company event?
-              </h2>
-              <p style={{
-                color: 'rgba(255,255,255,.8)',
-                fontSize: 'clamp(16px,2vw,18px)',
-                lineHeight: 1.6,
-                maxWidth: '46ch',
-              }}>
-                Send us the brief and we&apos;ll come back with a proposal and availability, usually within one working day.
-              </p>
+          <ScrollReveal>
+            <div className="corp-cta-grid">
+              <div>
+                <h2 style={{
+                  fontFamily: 'var(--font-sans)',
+                  fontWeight: 800,
+                  letterSpacing: '-.02em',
+                  fontSize: 'clamp(34px,3.8vw,44px)',
+                  lineHeight: 1.1,
+                  color: '#fff',
+                  marginBottom: 16,
+                }}>
+                  Planning a company event?
+                </h2>
+                <p style={{
+                  color: 'rgba(255,255,255,.8)',
+                  fontSize: 'clamp(16px,2vw,18px)',
+                  lineHeight: 1.6,
+                  maxWidth: '46ch',
+                }}>
+                  Send us the brief and we&apos;ll come back with a proposal and availability, usually within one working day.
+                </p>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Link
+                  className="btn btn-lg"
+                  href="/enquiry?lane=corporate"
+                  style={{ background: '#fff', color: '#1f3a5f', border: '2px solid #fff' }}
+                >
+                  Request a proposal →
+                </Link>
+              </div>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <Link
-                className="btn btn-lg"
-                href="/enquiry?lane=corporate"
-                style={{ background: '#fff', color: '#1f3a5f', border: '2px solid #fff' }}
-              >
-                Request a proposal →
-              </Link>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 

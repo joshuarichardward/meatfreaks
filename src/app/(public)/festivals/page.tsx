@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ScrollReveal } from '@/components/ui/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Festival & Event BBQ Catering',
@@ -77,49 +78,57 @@ export default function FestivalsPage() {
       {/* ── WHY GRID ─────────────────────────────────────────────────── */}
       <section className="section" style={{ background: 'var(--char-2)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '52ch', margin: '0 auto clamp(36px,6vw,64px)' }}>
-            <p className="eyebrow">Why we slap at a festival</p>
-            <h2
-              className="display"
-              style={{ fontSize: 'clamp(38px,5vw,54px)', color: 'var(--cream)', marginTop: 12 }}
-            >
-              Crowd-pleasers that actually please the crowd.
-            </h2>
-          </div>
+          <ScrollReveal>
+            <div style={{ textAlign: 'center', maxWidth: '52ch', margin: '0 auto clamp(36px,6vw,64px)' }}>
+              <p className="eyebrow">Why we slap at a festival</p>
+              <h2
+                className="display"
+                style={{ fontSize: 'clamp(38px,5vw,54px)', color: 'var(--cream)', marginTop: 12 }}
+              >
+                Crowd-pleasers that actually please the crowd.
+              </h2>
+            </div>
+          </ScrollReveal>
 
           <div className="why-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 2 }}>
             {/* Card 01 */}
-            <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)' }}>
-              <p style={{ fontFamily: 'var(--font-display)', fontSize: 48, color: 'var(--ember)', lineHeight: 1, marginBottom: 16, letterSpacing: '.5px' }}>01</p>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.8vw,30px)', textTransform: 'uppercase', letterSpacing: '.5px', color: 'var(--cream)', marginBottom: 14 }}>
-                Built for volume
-              </h3>
-              <p style={{ color: 'rgba(244,234,215,.75)', lineHeight: 1.6 }}>
-                From a 150-head village fete to thousands through the gate, our pit and crew scale to the queue without dropping quality.
-              </p>
-            </div>
+            <ScrollReveal delay={0}>
+              <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)' }}>
+                <p style={{ fontFamily: 'var(--font-display)', fontSize: 48, color: 'var(--ember)', lineHeight: 1, marginBottom: 16, letterSpacing: '.5px' }}>01</p>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.8vw,30px)', textTransform: 'uppercase', letterSpacing: '.5px', color: 'var(--cream)', marginBottom: 14 }}>
+                  Built for volume
+                </h3>
+                <p style={{ color: 'rgba(244,234,215,.75)', lineHeight: 1.6 }}>
+                  From a 150-head village fete to thousands through the gate, our pit and crew scale to the queue without dropping quality.
+                </p>
+              </div>
+            </ScrollReveal>
 
             {/* Card 02 */}
-            <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)' }}>
-              <p style={{ fontFamily: 'var(--font-display)', fontSize: 48, color: 'var(--ember)', lineHeight: 1, marginBottom: 16, letterSpacing: '.5px' }}>02</p>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.8vw,30px)', textTransform: 'uppercase', letterSpacing: '.5px', color: 'var(--cream)', marginBottom: 14 }}>
-                A proper spectacle
-              </h3>
-              <p style={{ color: 'rgba(244,234,215,.75)', lineHeight: 1.6 }}>
-                Live fire, rolling smoke, the smell that pulls people in from three fields away. We&apos;re as much part of the atmosphere as the lineup.
-              </p>
-            </div>
+            <ScrollReveal delay={100}>
+              <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)' }}>
+                <p style={{ fontFamily: 'var(--font-display)', fontSize: 48, color: 'var(--ember)', lineHeight: 1, marginBottom: 16, letterSpacing: '.5px' }}>02</p>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.8vw,30px)', textTransform: 'uppercase', letterSpacing: '.5px', color: 'var(--cream)', marginBottom: 14 }}>
+                  A proper spectacle
+                </h3>
+                <p style={{ color: 'rgba(244,234,215,.75)', lineHeight: 1.6 }}>
+                  Live fire, rolling smoke, the smell that pulls people in from three fields away. We&apos;re as much part of the atmosphere as the lineup.
+                </p>
+              </div>
+            </ScrollReveal>
 
             {/* Card 03 */}
-            <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)' }}>
-              <p style={{ fontFamily: 'var(--font-display)', fontSize: 48, color: 'var(--ember)', lineHeight: 1, marginBottom: 16, letterSpacing: '.5px' }}>03</p>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.8vw,30px)', textTransform: 'uppercase', letterSpacing: '.5px', color: 'var(--cream)', marginBottom: 14 }}>
-                Fully self-contained
-              </h3>
-              <p style={{ color: 'rgba(244,234,215,.75)', lineHeight: 1.6 }}>
-                Power, gazebo, servery, the lot. Point us at a patch of grass and we&apos;ll be plating within the hour.
-              </p>
-            </div>
+            <ScrollReveal delay={200}>
+              <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)' }}>
+                <p style={{ fontFamily: 'var(--font-display)', fontSize: 48, color: 'var(--ember)', lineHeight: 1, marginBottom: 16, letterSpacing: '.5px' }}>03</p>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.8vw,30px)', textTransform: 'uppercase', letterSpacing: '.5px', color: 'var(--cream)', marginBottom: 14 }}>
+                  Fully self-contained
+                </h3>
+                <p style={{ color: 'rgba(244,234,215,.75)', lineHeight: 1.6 }}>
+                  Power, gazebo, servery, the lot. Point us at a patch of grass and we&apos;ll be plating within the hour.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -127,13 +136,15 @@ export default function FestivalsPage() {
       {/* ── WHAT ROLLS UP ────────────────────────────────────────────── */}
       <section className="section" style={{ background: 'var(--red)' }}>
         <div className="container">
-          <p className="eyebrow" style={{ color: '#ffce3a', marginBottom: 12 }}>What rolls up</p>
-          <h2
-            className="display"
-            style={{ fontSize: 'clamp(38px,5vw,54px)', color: 'var(--cream)', marginBottom: 'clamp(32px,5vw,56px)' }}
-          >
-            The whole rig, ready to feed.
-          </h2>
+          <ScrollReveal>
+            <p className="eyebrow" style={{ color: '#ffce3a', marginBottom: 12 }}>What rolls up</p>
+            <h2
+              className="display"
+              style={{ fontSize: 'clamp(38px,5vw,54px)', color: 'var(--cream)', marginBottom: 'clamp(32px,5vw,56px)' }}
+            >
+              The whole rig, ready to feed.
+            </h2>
+          </ScrollReveal>
 
           <div className="grid-2" style={{ alignItems: 'center' }}>
             {/* Numbered list */}
@@ -173,13 +184,14 @@ export default function FestivalsPage() {
       {/* ── GALLERY ──────────────────────────────────────────────────── */}
       <section className="section" style={{ background: 'var(--char)' }}>
         <div className="container">
-          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 16, marginBottom: 'clamp(24px,4vw,40px)', flexWrap: 'wrap' }}>
-            <h2
-              className="display"
-              style={{ fontSize: 'clamp(36px,4.5vw,52px)', color: 'var(--cream)' }}
-            >
-              Off the pit
-            </h2>
+          <ScrollReveal>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 16, marginBottom: 'clamp(24px,4vw,40px)', flexWrap: 'wrap' }}>
+              <h2
+                className="display"
+                style={{ fontSize: 'clamp(36px,4.5vw,52px)', color: 'var(--cream)' }}
+              >
+                Off the pit
+              </h2>
             <a
               href="https://instagram.com/meatfreaks1"
               target="_blank"
@@ -189,6 +201,7 @@ export default function FestivalsPage() {
               More on @meatfreaks1 →
             </a>
           </div>
+          </ScrollReveal>
 
           {/* 4-col CSS grid */}
           <div className="fest-gallery">
@@ -264,30 +277,32 @@ export default function FestivalsPage() {
       {/* ── CTA ──────────────────────────────────────────────────────── */}
       <section className="section" style={{ background: '#ffce3a', color: 'var(--char)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
-          {/* Sticker */}
-          <div style={{ marginBottom: 20 }}>
-            <span className="sticker red" style={{ fontSize: 14, transform: 'rotate(-2deg)', display: 'inline-block' }}>
-              Dates go fast
-            </span>
-          </div>
+          <ScrollReveal>
+            {/* Sticker */}
+            <div style={{ marginBottom: 20 }}>
+              <span className="sticker red" style={{ fontSize: 14, transform: 'rotate(-2deg)', display: 'inline-block' }}>
+                Dates go fast
+              </span>
+            </div>
 
-          <h2
-            className="display"
-            style={{ fontSize: 'clamp(38px,5vw,58px)', color: 'var(--char)', marginBottom: 18 }}
-          >
-            Got a festival? Let&apos;s get cooking.
-          </h2>
+            <h2
+              className="display"
+              style={{ fontSize: 'clamp(38px,5vw,58px)', color: 'var(--char)', marginBottom: 18 }}
+            >
+              Got a festival? Let&apos;s get cooking.
+            </h2>
 
-          <p style={{ fontSize: 'clamp(17px,2vw,20px)', color: 'rgba(27,21,17,.75)', marginBottom: 32, lineHeight: 1.55 }}>
-            Tell us your dates and footfall, we&apos;ll check availability.
-          </p>
+            <p style={{ fontSize: 'clamp(17px,2vw,20px)', color: 'rgba(27,21,17,.75)', marginBottom: 32, lineHeight: 1.55 }}>
+              Tell us your dates and footfall, we&apos;ll check availability.
+            </p>
 
-          <Link
-            className="btn btn-dark btn-lg"
-            href="/enquiry?lane=festival"
-          >
-            Start a festival enquiry <span className="arr">→</span>
-          </Link>
+            <Link
+              className="btn btn-dark btn-lg"
+              href="/enquiry?lane=festival"
+            >
+              Start a festival enquiry <span className="arr">→</span>
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
 

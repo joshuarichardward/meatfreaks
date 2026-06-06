@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ScrollReveal } from '@/components/ui/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Wedding BBQ Catering',
@@ -70,35 +71,37 @@ export default function WeddingsPage() {
       {/* ── 2. INTRO ────────────────────────────────────────────────────────── */}
       <section className="section" style={{ textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: 680 }}>
-          <div style={{
-            position: 'relative',
-            width: 96,
-            height: 96,
-            borderRadius: 100,
-            overflow: 'hidden',
-            margin: '0 auto 28px',
-            boxShadow: '0 4px 22px rgba(42,34,28,.18)',
-          }}>
-            <Image
-              src="/assets/mf-monogram.jpg"
-              alt="Meat Freaks monogram"
-              fill
-              sizes="96px"
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
-          <p style={{
-            fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontSize: 'clamp(20px,2.4vw,26px)',
-            lineHeight: 1.55,
-            color: '#2a221c',
-          }}>
-            Smoke and fire, plated with{' '}
-            <em style={{ fontStyle: 'italic', color: '#b06a3f' }}>intention.</em>{' '}
-            We bring the warmth of a backyard cook-out to a celebration that feels
-            considered, calm and entirely yours.
-          </p>
+          <ScrollReveal>
+            <div style={{
+              position: 'relative',
+              width: 96,
+              height: 96,
+              borderRadius: 100,
+              overflow: 'hidden',
+              margin: '0 auto 28px',
+              boxShadow: '0 4px 22px rgba(42,34,28,.18)',
+            }}>
+              <Image
+                src="/assets/mf-monogram.jpg"
+                alt="Meat Freaks monogram"
+                fill
+                sizes="96px"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <p style={{
+              fontFamily: 'var(--font-serif)',
+              fontStyle: 'italic',
+              fontSize: 'clamp(20px,2.4vw,26px)',
+              lineHeight: 1.55,
+              color: '#2a221c',
+            }}>
+              Smoke and fire, plated with{' '}
+              <em style={{ fontStyle: 'italic', color: '#b06a3f' }}>intention.</em>{' '}
+              We bring the warmth of a backyard cook-out to a celebration that feels
+              considered, calm and entirely yours.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -110,12 +113,14 @@ export default function WeddingsPage() {
       {/* ── 4. HOW WE CATER ─────────────────────────────────────────────────── */}
       <section className="section">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '50ch', margin: '0 auto clamp(40px,6vw,68px)' }}>
-            <p className="eyebrow">How we cater your day</p>
-            <h2 className="display-serif" style={{ fontSize: 'clamp(38px,4.5vw,52px)', marginTop: 14 }}>
-              Quietly looked after, start to finish.
-            </h2>
-          </div>
+          <ScrollReveal>
+            <div style={{ textAlign: 'center', maxWidth: '50ch', margin: '0 auto clamp(40px,6vw,68px)' }}>
+              <p className="eyebrow">How we cater your day</p>
+              <h2 className="display-serif" style={{ fontSize: 'clamp(38px,4.5vw,52px)', marginTop: 14 }}>
+                Quietly looked after, start to finish.
+              </h2>
+            </div>
+          </ScrollReveal>
 
           <div className="w-offer-grid">
             {[
@@ -134,31 +139,33 @@ export default function WeddingsPage() {
                 title: 'Calm on the day',
                 body: "Our team handle the cook, the service and the clear-down so you and your guests simply enjoy it. We've got the timings.",
               },
-            ].map(offer => (
-              <div key={offer.num}>
-                <p style={{
-                  fontFamily: 'var(--font-serif)',
-                  fontStyle: 'italic',
-                  fontSize: 20,
-                  color: '#b06a3f',
-                  marginBottom: 10,
-                }}>
-                  {offer.num}
-                </p>
-                <h3 style={{
-                  fontFamily: 'var(--font-serif)',
-                  fontWeight: 600,
-                  fontSize: 26,
-                  color: '#2a221c',
-                  marginBottom: 12,
-                  lineHeight: 1.1,
-                }}>
-                  {offer.title}
-                </h3>
-                <p style={{ color: '#5a4f45', fontSize: 16, lineHeight: 1.6 }}>
-                  {offer.body}
-                </p>
-              </div>
+            ].map((offer, i) => (
+              <ScrollReveal key={offer.num} delay={i * 100}>
+                <div>
+                  <p style={{
+                    fontFamily: 'var(--font-serif)',
+                    fontStyle: 'italic',
+                    fontSize: 20,
+                    color: '#b06a3f',
+                    marginBottom: 10,
+                  }}>
+                    {offer.num}
+                  </p>
+                  <h3 style={{
+                    fontFamily: 'var(--font-serif)',
+                    fontWeight: 600,
+                    fontSize: 26,
+                    color: '#2a221c',
+                    marginBottom: 12,
+                    lineHeight: 1.1,
+                  }}>
+                    {offer.title}
+                  </h3>
+                  <p style={{ color: '#5a4f45', fontSize: 16, lineHeight: 1.6 }}>
+                    {offer.body}
+                  </p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -221,8 +228,9 @@ export default function WeddingsPage() {
                 quote: 'Every one of our guests was amazed by the food. Andy and the team put together a completely personalised menu for us and nothing was too much trouble, they made our engagement party feel really special.',
                 attr: 'Chris & Katie \u00b7 Lancashire engagement party',
               },
-            ].map(card => (
-              <div key={card.attr} style={{
+            ].map((card, i) => (
+              <ScrollReveal key={card.attr} delay={i * 100}>
+              <div style={{
                 display: 'flex',
                 flexDirection: 'column',
                 border: '1px solid rgba(244,234,215,.2)',
@@ -250,6 +258,7 @@ export default function WeddingsPage() {
                   {card.attr}
                 </p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -258,6 +267,7 @@ export default function WeddingsPage() {
       {/* ── 7. CTA ──────────────────────────────────────────────────────────── */}
       <section className="section" style={{ background: 'var(--bone)', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: 660 }}>
+          <ScrollReveal>
           <p className="eyebrow">Let&apos;s talk about your day</p>
           <h2 style={{
             fontFamily: 'var(--font-serif)',
@@ -289,6 +299,7 @@ export default function WeddingsPage() {
               Enquire about your wedding <span className="arr">→</span>
             </Link>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 

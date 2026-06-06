@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ScrollReveal } from '@/components/ui/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -53,6 +54,7 @@ export default function About() {
       {/* ── 2. STORY ── */}
       <section className="section">
         <div className="container" style={{ maxWidth: 760 }}>
+          <ScrollReveal>
           {/* kicker row */}
           <div className="kicker-row" style={{ marginBottom: 36 }}>
             <p className="eyebrow">The story</p>
@@ -86,11 +88,13 @@ export default function About() {
               What started as pure passion now feeds events the length of the country: muddy festivals, elegant weddings, corporate days and back-garden parties. Andy still leads from the front, and the whole team shares the same obsession, high-end food, straight off the fire, wherever you are.
             </p>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── 3. BRAND STAMP ── */}
       <section style={{ background: '#120d0a', textAlign: 'center', padding: 'clamp(48px,7vw,84px) 22px' }}>
+        <ScrollReveal>
         <div style={{ display: 'inline-block' }}>
           <div
             style={{
@@ -123,22 +127,25 @@ export default function About() {
         >
           Fire · Flavour · Feast
         </p>
+        </ScrollReveal>
       </section>
 
       {/* ── 4. VALUES ── */}
       <section className="section" style={{ background: 'var(--char)', color: 'var(--cream)' }}>
         <div className="container">
-          <p className="eyebrow" style={{ marginBottom: 14 }}>What makes us freaks</p>
-          <h2
-            className="display"
-            style={{
-              fontSize: 'clamp(38px,4.5vw,54px)',
-              maxWidth: '18ch',
-              marginBottom: 'clamp(36px,5vw,56px)',
-            }}
-          >
-            Three things we&apos;ll never compromise on.
-          </h2>
+          <ScrollReveal>
+            <p className="eyebrow" style={{ marginBottom: 14 }}>What makes us freaks</p>
+            <h2
+              className="display"
+              style={{
+                fontSize: 'clamp(38px,4.5vw,54px)',
+                maxWidth: '18ch',
+                marginBottom: 'clamp(36px,5vw,56px)',
+              }}
+            >
+              Three things we&apos;ll never compromise on.
+            </h2>
+          </ScrollReveal>
 
           {/* 3-col grid */}
           <div
@@ -167,9 +174,9 @@ export default function About() {
                 title: 'Feed people properly',
                 body: 'Generous portions, big flavour, zero pretension. Everyone leaves full and talking about it.',
               },
-            ].map(card => (
+            ].map((card, i) => (
+              <ScrollReveal key={card.num} delay={i * 100}>
               <div
-                key={card.num}
                 style={{
                   background: 'var(--char)',
                   padding: '30px 26px',
@@ -198,6 +205,7 @@ export default function About() {
                 </h3>
                 <p style={{ color: 'rgba(244,234,215,.74)', fontSize: 15, lineHeight: 1.6 }}>{card.body}</p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
 
@@ -214,6 +222,7 @@ export default function About() {
       {/* ── 5. TEAM / CREW ── */}
       <section className="section">
         <div className="container">
+          <ScrollReveal>
           <div className="grid-2">
             {/* left: founder photo */}
             <div className="ph" style={{ aspectRatio: '4/3' }}>
@@ -240,6 +249,7 @@ export default function About() {
               </Link>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 

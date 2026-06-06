@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ScrollReveal } from '@/components/ui/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'The Menu',
@@ -301,29 +302,31 @@ export default function MenuPage() {
               }}
             >
               {/* Category header */}
-              <div style={{ marginBottom: 28 }}>
-                <p
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: 13,
-                    letterSpacing: '.3em',
-                    textTransform: 'uppercase',
-                    color: 'var(--ember)',
-                    marginBottom: 8,
-                  }}
-                >
-                  {cat.index}
-                </p>
-                <h2
-                  className="display"
-                  style={{ fontSize: 'clamp(40px,5vw,52px)', color: 'var(--char)' }}
-                >
-                  {cat.title}
-                </h2>
-                <p style={{ marginTop: 10, color: 'var(--muted)', fontSize: 16, maxWidth: '56ch' }}>
-                  {cat.sub}
-                </p>
-              </div>
+              <ScrollReveal>
+                <div style={{ marginBottom: 28 }}>
+                  <p
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: 13,
+                      letterSpacing: '.3em',
+                      textTransform: 'uppercase',
+                      color: 'var(--ember)',
+                      marginBottom: 8,
+                    }}
+                  >
+                    {cat.index}
+                  </p>
+                  <h2
+                    className="display"
+                    style={{ fontSize: 'clamp(40px,5vw,52px)', color: 'var(--char)' }}
+                  >
+                    {cat.title}
+                  </h2>
+                  <p style={{ marginTop: 10, color: 'var(--muted)', fontSize: 16, maxWidth: '56ch' }}>
+                    {cat.sub}
+                  </p>
+                </div>
+              </ScrollReveal>
 
               {/* Items */}
               <div className="menu-list">
