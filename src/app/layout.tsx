@@ -22,7 +22,7 @@ const cormorant = Cormorant({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.meatfreaks.co.uk'),
   title: {
-    default: 'Meat Freaks — UK-Wide BBQ Event Catering',
+    default: 'Meat Freaks - UK-Wide BBQ Event Catering',
     template: '%s · Meat Freaks',
   },
   description:

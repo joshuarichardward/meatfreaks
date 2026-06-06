@@ -222,7 +222,7 @@ export default function CorporatePage() {
                 lineHeight: 1.6,
                 maxWidth: '42ch',
               }}>
-                We&apos;ve built our operation around the demands of professional events — consistent quality, clear communication and zero drama on the day.
+                We&apos;ve built our operation around the demands of professional events - consistent quality, clear communication and zero drama on the day.
               </p>
             </div>
 

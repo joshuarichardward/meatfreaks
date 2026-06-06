@@ -62,8 +62,8 @@ export default function PrivacyPage() {
             <h2 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontSize: 'clamp(22px,3vw,28px)', letterSpacing: '.5px', marginBottom: 14 }}>5. Who we share your data with</h2>
             <p style={{ marginBottom: 12 }}>We do not sell your personal data. We share it only with:</p>
             <ul style={{ marginBottom: 28, paddingLeft: 22 }}>
-              <li><strong>Resend</strong> — to send confirmation and notification emails on our behalf</li>
-              <li><strong>Vercel</strong> — our website hosting provider, which processes anonymised analytics data</li>
+              <li><strong>Resend</strong> - to send confirmation and notification emails on our behalf</li>
+              <li><strong>Vercel</strong> - our website hosting provider, which processes anonymised analytics data</li>
             </ul>
             <p style={{ marginBottom: 28 }}>We do not share your data with any other third parties unless required by law.</p>
 

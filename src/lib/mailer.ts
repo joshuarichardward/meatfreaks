@@ -23,7 +23,7 @@ export async function sendOwnerEmail(payload: EnquiryPayload) {
     from: EMAIL_FROM,
     to: EMAIL_OWNER,
     replyTo: payload.email,
-    subject: `New enquiry — ${TYPE_LABELS[payload.eventType] || payload.eventType} in ${payload.region} on ${dateStr}`,
+    subject: `New enquiry - ${TYPE_LABELS[payload.eventType] || payload.eventType} in ${payload.region} on ${dateStr}`,
     text: [
       `Name: ${payload.name}`,
       `Email: ${payload.email}`,
@@ -50,11 +50,11 @@ export async function sendClientEmail(payload: EnquiryPayload) {
   await getResend().emails.send({
     from: EMAIL_FROM,
     to: payload.email,
-    subject: `We've got your enquiry, ${firstName} — Meat Freaks`,
+    subject: `We've got your enquiry, ${firstName} - Meat Freaks`,
     text: [
       `Hi ${firstName},`,
       ``,
-      `Thanks for getting in touch — your enquiry has landed with the Meat Freaks crew.`,
+      `Thanks for getting in touch - your enquiry has landed with the Meat Freaks crew.`,
       ``,
       `Here's what you sent us:`,
       `  Event type: ${TYPE_LABELS[payload.eventType] || payload.eventType}`,
@@ -65,7 +65,7 @@ export async function sendClientEmail(payload: EnquiryPayload) {
       `We'll come back to you usually within one working day with availability,`,
       `a tailored menu and a written quote.`,
       ``,
-      payload.date ? `If you included a date, there's a provisional calendar invite attached —` : '',
+      payload.date ? `If you included a date, there's a provisional calendar invite attached -` : '',
       payload.date ? `this is just a placeholder until we confirm.` : '',
       ``,
       `Any questions: meatfreaksltd@gmail.com / 07916 635610`,

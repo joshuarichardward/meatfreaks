@@ -15,8 +15,8 @@ export function generateICS(payload: EnquiryPayload): string {
     `DTSTAMP:${dtStamp}`,
     `DTSTART;VALUE=DATE:${dtStart}`,
     `DTEND;VALUE=DATE:${dtStart}`,
-    `SUMMARY:Meat Freaks BBQ — ${payload.eventType} (provisional)`,
-    `DESCRIPTION:Enquiry from ${payload.name}. Provisional — subject to confirmation.`,
+    `SUMMARY:Meat Freaks BBQ - ${payload.eventType} (provisional)`,
+    `DESCRIPTION:Enquiry from ${payload.name}. Provisional - subject to confirmation.`,
     'END:VEVENT',
     'END:VCALENDAR'
   ].join('\r\n')

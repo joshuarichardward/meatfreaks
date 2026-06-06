@@ -329,7 +329,7 @@ export default function EnquiryClient() {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } catch {
       setUIState('form')
-      alert('Something went wrong — please try again or email us directly.')
+      alert('Something went wrong - please try again or email us directly.')
     }
   }
 
@@ -741,7 +741,7 @@ export default function EnquiryClient() {
                     </svg>
                     <span>
                       No obligation. We&apos;ll come back within one working day with
-                      tailored options and pricing — completely free.
+                      tailored options and pricing - completely free.
                     </span>
                   </div>
                 </div>
