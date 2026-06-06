@@ -411,7 +411,7 @@ export default function AdminDashboard() {
   /* ── Logout ───────────────────────────────────────────────────────── */
 
   function handleLogout() {
-    document.cookie = 'mf-admin-token=; path=/admin; max-age=0'
+    document.cookie = 'mf-admin-token=; path=/; max-age=0'
     router.replace('/admin')
   }
 

@@ -1,5 +1,9 @@
 import { EnquiryPayload } from './types'
 
+function escapeICS(str: string): string {
+  return str.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n').replace(/\r/g, '')
+}
+
 export function generateICS(payload: EnquiryPayload): string {
   if (!payload.date) return ''
   const [y, m, d] = payload.date.split('-').map(Number)
@@ -15,8 +19,8 @@ export function generateICS(payload: EnquiryPayload): string {
     `DTSTAMP:${dtStamp}`,
     `DTSTART;VALUE=DATE:${dtStart}`,
     `DTEND;VALUE=DATE:${dtStart}`,
-    `SUMMARY:Meat Freaks BBQ - ${payload.eventType} (provisional)`,
-    `DESCRIPTION:Enquiry from ${payload.name}. Provisional - subject to confirmation.`,
+    `SUMMARY:Meat Freaks BBQ - ${escapeICS(payload.eventType)} (provisional)`,
+    `DESCRIPTION:Enquiry from ${escapeICS(payload.name)}. Provisional - subject to confirmation.`,
     'END:VEVENT',
     'END:VCALENDAR'
   ].join('\r\n')
