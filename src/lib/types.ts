@@ -15,6 +15,11 @@ export interface StoredEnquiry extends EnquiryPayload {
   id: string
 }
 
+export interface BookedDate {
+  date: string
+  calEventId: string | null
+}
+
 export interface AvailabilityResponse {
   unavailable: string[]
 }
