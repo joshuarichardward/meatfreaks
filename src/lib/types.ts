@@ -11,6 +11,10 @@ export interface EnquiryPayload {
   submittedAt: string
 }
 
+export interface StoredEnquiry extends EnquiryPayload {
+  id: string
+}
+
 export interface AvailabilityResponse {
   unavailable: string[]
 }
