@@ -107,7 +107,7 @@ export default function Home() {
                 {[
                   { name: '12-Hour Brisket', sub: 'Salt, pepper, oak smoke' },
                   { name: 'Pulled Pork Shoulder', sub: 'Apple-smoked, hand-pulled' },
-                  { name: 'Dirty Loaded Fries', sub: 'Burnt ends, cheese, pickles' },
+                  { name: 'Smoked Mac & Cheese', sub: 'Three-cheese, crisp golden top' },
                   { name: 'Sticky Smoked Wings', sub: 'Hot honey & bourbon glaze' },
                 ].map(item => (
                   <div key={item.name} style={{ breakInside: 'avoid', padding: '14px 0', borderBottom: '1px solid rgba(244,234,215,.14)' }}>

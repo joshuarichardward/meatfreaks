@@ -67,18 +67,8 @@ const categories = [
         desc: 'Hand-pulled pork, apple slaw and a scatter of crackling crumb.',
       },
       {
-        name: 'Buttermilk Fried Chicken',
-        flag: { label: 'Hot Honey', cls: 'hot' },
-        desc: 'Crisp buttermilk chicken thigh, hot honey, dill pickle, soft bun.',
-      },
-      {
         name: 'The Loaded Dog',
         desc: 'Foot-long smoked sausage, burnt ends, crispy onions, mustard mayo.',
-      },
-      {
-        name: 'The Veggie Freak',
-        flag: { label: 'V / VG', cls: '' },
-        desc: 'Smoked jackfruit or grilled halloumi, slaw and pickles, not an afterthought.',
       },
     ],
   },
@@ -88,11 +78,6 @@ const categories = [
     title: 'Sides',
     sub: 'Never an afterthought. Order a few, everyone always does.',
     items: [
-      {
-        name: 'Dirty Loaded Fries',
-        flag: { label: 'Signature', cls: 'sig' },
-        desc: 'Skin-on fries, burnt ends, cheese sauce, pickled jalapeños.',
-      },
       {
         name: 'Smoked Mac & Cheese',
         tags: 'V',
