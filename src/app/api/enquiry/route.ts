@@ -4,6 +4,8 @@ import { storeEnquiry } from '@/lib/availability'
 import { sendOwnerEmail, sendClientEmail } from '@/lib/mailer'
 import { enquiryLimiter, getIP } from '@/lib/rate-limit'
 
+const VALID_EVENT_TYPES = ['party', 'wedding', 'corporate', 'festival', 'other']
+
 export async function POST(req: Request) {
   // Rate limit by IP (only when KV is available)
   if (process.env.KV_REST_API_URL) {
@@ -23,6 +25,23 @@ export async function POST(req: Request) {
   // Validate email format
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
     return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
+  }
+
+  // Validate event type against allowed values
+  if (!VALID_EVENT_TYPES.includes(payload.eventType)) {
+    return NextResponse.json({ error: 'Invalid event type' }, { status: 400 })
+  }
+
+  // Validate input lengths to prevent storage abuse
+  if (
+    payload.name.length > 200 ||
+    payload.email.length > 200 ||
+    payload.region.length > 200 ||
+    (payload.phone?.length ?? 0) > 50 ||
+    (payload.notes?.length ?? 0) > 5000 ||
+    (payload.guests?.length ?? 0) > 50
+  ) {
+    return NextResponse.json({ error: 'Input too long' }, { status: 400 })
   }
 
   const stored = {

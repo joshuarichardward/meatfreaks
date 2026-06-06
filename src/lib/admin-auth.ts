@@ -43,11 +43,12 @@ export async function verifyMagicLinkToken(token: string): Promise<{ email: stri
     const { payload } = await jwtVerify(token, getSecret())
     if (payload.purpose !== 'magic-link') return null
 
-    // One-time use: check if this token has already been used
-    if (process.env.KV_REST_API_URL && payload.jti) {
+    // One-time use: reject if KV unavailable in production (fail closed)
+    if (!process.env.KV_REST_API_URL) {
+      if (process.env.NODE_ENV === 'production') return null
+    } else if (payload.jti) {
       const used = await kv.get(`used-token:${payload.jti}`)
       if (used) return null
-      // Mark as used with 15-minute TTL
       await kv.set(`used-token:${payload.jti}`, '1', { ex: 900 })
     }
 
