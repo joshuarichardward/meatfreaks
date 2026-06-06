@@ -32,7 +32,8 @@ const categories = [
         desc: 'Single giant rib, low and slow until it gives way at a touch. A proper showpiece.',
       },
       {
-        name: 'St. Louis Pork Ribs',
+        name: 'Pork Ribs',
+        flag: { label: 'Signature', cls: 'sig' },
         desc: 'Sticky, glazed, full rack, that clean bite-through every BBQ fiend chases.',
       },
       {
@@ -90,7 +91,8 @@ const categories = [
       },
       {
         name: 'Pit Beans',
-        desc: 'Slow-cooked in molasses with burnt-end trimmings.',
+        flag: { label: 'Signature', cls: 'sig' },
+        desc: "The pitmaster's secret recipe. We don't talk about what goes in — we just know they never come back.",
       },
       {
         name: 'Honey-Butter Cornbread',
@@ -98,9 +100,9 @@ const categories = [
         desc: 'Warm, soft, brushed with honey butter.',
       },
       {
-        name: 'Charred Sweetcorn',
+        name: 'Streetcorn',
         tags: 'V · GF',
-        desc: 'Chipotle butter, lime, crumbled cheese.',
+        desc: "Served with Harry J's marinade.",
       },
     ],
   },
@@ -132,16 +134,12 @@ const categories = [
     sub: 'Add a bar package to any event, soft, craft or fully stocked.',
     items: [
       {
-        name: 'House Lemonade & Craft Sodas',
-        desc: 'Made-fresh lemonade and a rotating line-up of proper craft sodas.',
-      },
-      {
         name: 'Bottled Beers & Cider',
         desc: 'A curated fridge of local beers and ciders to match the smoke.',
       },
       {
-        name: 'Soft Drinks & Coffee',
-        desc: 'The full range of soft drinks, plus fresh coffee on request.',
+        name: 'Soft Drinks',
+        desc: 'The full range of soft drinks.',
       },
     ],
   },
