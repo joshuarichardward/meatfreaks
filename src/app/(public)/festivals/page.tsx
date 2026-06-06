@@ -93,7 +93,7 @@ export default function FestivalsPage() {
           <div className="why-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 2 }}>
             {/* Card 01 */}
             <ScrollReveal delay={0}>
-              <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)' }}>
+              <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)', height: '100%' }}>
                 <p style={{ fontFamily: 'var(--font-display)', fontSize: 48, color: 'var(--ember)', lineHeight: 1, marginBottom: 16, letterSpacing: '.5px' }}>01</p>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.8vw,30px)', textTransform: 'uppercase', letterSpacing: '.5px', color: 'var(--cream)', marginBottom: 14 }}>
                   Built for volume
@@ -106,7 +106,7 @@ export default function FestivalsPage() {
 
             {/* Card 02 */}
             <ScrollReveal delay={100}>
-              <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)' }}>
+              <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)', height: '100%' }}>
                 <p style={{ fontFamily: 'var(--font-display)', fontSize: 48, color: 'var(--ember)', lineHeight: 1, marginBottom: 16, letterSpacing: '.5px' }}>02</p>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.8vw,30px)', textTransform: 'uppercase', letterSpacing: '.5px', color: 'var(--cream)', marginBottom: 14 }}>
                   A proper spectacle
@@ -119,7 +119,7 @@ export default function FestivalsPage() {
 
             {/* Card 03 */}
             <ScrollReveal delay={200}>
-              <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)' }}>
+              <div style={{ background: 'var(--char-3)', padding: 'clamp(28px,4vw,48px)', borderRadius: 'var(--r)', height: '100%' }}>
                 <p style={{ fontFamily: 'var(--font-display)', fontSize: 48, color: 'var(--ember)', lineHeight: 1, marginBottom: 16, letterSpacing: '.5px' }}>03</p>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.8vw,30px)', textTransform: 'uppercase', letterSpacing: '.5px', color: 'var(--cream)', marginBottom: 14 }}>
                   Fully self-contained

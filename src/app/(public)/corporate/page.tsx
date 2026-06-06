@@ -115,7 +115,7 @@ export default function CorporatePage() {
               { n: 'Fully<br>insured', l: 'PL cover & Level 2 food hygiene', html: true },
             ].map((stat, i) => (
               <ScrollReveal key={stat.n} delay={i * 100}>
-                <div className="stat">
+                <div className="stat" style={{ height: '100%' }}>
                   {stat.html
                     ? <div className="n" dangerouslySetInnerHTML={{ __html: stat.n }} />
                     : <div className="n">{stat.n}</div>

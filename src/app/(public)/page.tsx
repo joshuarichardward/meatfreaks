@@ -33,7 +33,7 @@ export default function Home() {
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 30 }}>
             <Link className="btn btn-primary btn-lg" href="#choose">Choose your event <span className="arr">→</span></Link>
-            <Link className="btn btn-ghost btn-lg" href="/menu" style={{ color: 'var(--cream)' }}>See the menu</Link>
+            <Link className="btn btn-ghost-light btn-lg" href="/menu">See the menu</Link>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 20px', marginTop: 34, fontSize: 13, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'rgba(244,234,215,.6)' }}>
             {['Festivals', 'Weddings', 'Corporate', 'Private parties'].map(tag => (

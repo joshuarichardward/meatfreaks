@@ -288,8 +288,8 @@ export default function ContactPage() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-ghost"
-              style={{ color: 'var(--cream)', whiteSpace: 'nowrap' }}
+              className="btn btn-ghost-light"
+              style={{ whiteSpace: 'nowrap' }}
             >
               Open Instagram →
             </a>
