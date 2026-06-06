@@ -42,8 +42,7 @@ export default function WeddingsPage() {
             maxWidth: '42ch',
             color: '#5a4f45',
           }}>
-            Live-fire BBQ, beautifully done, relaxed enough to feel like you,
-            refined enough for the day that matters most.
+            Live-fire BBQ, beautifully done, refined enough for the day that matters most.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 36 }}>
             <Link className="btn btn-primary btn-lg" href="/enquiry?lane=wedding">
@@ -123,7 +122,7 @@ export default function WeddingsPage() {
               {
                 num: 'i.',
                 title: "A menu that's yours",
-                body: "We'll shape the food around your day, feasting tables, plated courses or relaxed sharing boards, with tastings before you commit.",
+                body: "We'll shape the food around your day, feasting tables, plated courses or relaxed sharing boards.",
               },
               {
                 num: 'ii.',
@@ -215,7 +214,7 @@ export default function WeddingsPage() {
           <div className="w-testi-grid">
             {[
               {
-                quote: '\u2018We\u2019d seen Meat Freaks bring the noise at a festival, so we couldn\u2019t quite believe it was the same crew at our wedding, sharp in uniform, with high-end, considered plating and the calmest, most elegant atmosphere. Same incredible food, run completely differently. Our guests are still talking about it.',
+                quote: '\u2018We\u2019d seen Meat Freaks bring the noise at a festival, so we couldn\u2019t quite believe it was the same crew at our wedding, sharp in uniform, and the calmest, most elegant atmosphere. Same incredible food, run completely differently. Our guests are still talking about it.',
                 attr: 'Hannah & Tom \u00b7 Cotswolds wedding',
               },
               {

@@ -279,7 +279,7 @@ export default function FestivalsPage() {
           </h2>
 
           <p style={{ fontSize: 'clamp(17px,2vw,20px)', color: 'rgba(27,21,17,.75)', marginBottom: 32, lineHeight: 1.55 }}>
-            Tell us your dates and footfall, we&apos;ll check availability and build you a quote.
+            Tell us your dates and footfall, we&apos;ll check availability.
           </p>
 
           <Link
