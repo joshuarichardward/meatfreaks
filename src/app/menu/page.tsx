@@ -337,7 +337,7 @@ export default function MenuPage() {
                         </span>
                       )}
                     </h4>
-                    {item.tags && <span className="mtag">{item.tags}</span>}
+                    {'tags' in item && item.tags && <span className="mtag">{item.tags}</span>}
                     <p className="desc">{item.desc}</p>
                   </div>
                 ))}
