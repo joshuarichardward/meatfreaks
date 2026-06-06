@@ -429,6 +429,7 @@ export default function EnquiryClient() {
                 <p style={{ fontSize: 14, color: 'var(--muted)', marginTop: 4, lineHeight: 1.5 }}>
                   We&apos;ll review your details, check the date and come back to you by email
                   within one working day with a tailored menu proposal and quote.
+                  If you don&apos;t see a confirmation email, please check your spam or junk folder.
                 </p>
               </div>
             </div>
