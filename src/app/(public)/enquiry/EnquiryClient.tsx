@@ -115,6 +115,7 @@ function Calendar({ selected, onSelect }: CalendarProps) {
         </span>
         <div className="cal-nav">
           <button
+            type="button"
             onClick={prevMonth}
             disabled={isCurrentMonth}
             aria-label="Previous month"
@@ -122,7 +123,7 @@ function Calendar({ selected, onSelect }: CalendarProps) {
           >
             ←
           </button>
-          <button onClick={nextMonth} aria-label="Next month">→</button>
+          <button type="button" onClick={nextMonth} aria-label="Next month">→</button>
         </div>
       </div>
 
@@ -570,11 +571,17 @@ export default function EnquiryClient() {
                   }}
                 >
                   <StepLabel n={2}>Pick your date</StepLabel>
-                  <Calendar selected={date} onSelect={setDate} />
+                  <Calendar selected={date} onSelect={(iso) => {
+                  setDate(iso)
+                  setTimeout(() => {
+                    document.getElementById('enq-details')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }, 100)
+                }} />
                 </div>
 
                 {/* ─ Block 3: Details ─ */}
                 <div
+                  id="enq-details"
                   style={{
                     background: '#fff', borderRadius: 10, padding: 'clamp(22px,3vw,36px)',
                     boxShadow: '0 1px 2px rgba(27,21,17,.06), 0 6px 20px -8px rgba(27,21,17,.14)',
