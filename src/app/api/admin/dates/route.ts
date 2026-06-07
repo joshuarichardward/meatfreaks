@@ -5,6 +5,14 @@ import { createCalendarEvent, deleteCalendarEvent } from '@/lib/google-calendar'
 
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/
 
+function checkOrigin(request: NextRequest): boolean {
+  const origin = request.headers.get('origin')
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || ''
+  if (!origin) return true // same-origin requests (non-CORS) omit Origin
+  const allowed = [siteUrl, 'https://www.meatfreaks.co.uk', 'https://meatfreaks.co.uk'].filter(Boolean)
+  return allowed.some(a => origin === a)
+}
+
 export async function GET() {
   const session = await getAdminSession()
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -14,6 +22,7 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
+  if (!checkOrigin(request)) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
   const session = await getAdminSession()
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
@@ -45,6 +54,7 @@ export async function POST(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
+  if (!checkOrigin(request)) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
   const session = await getAdminSession()
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 

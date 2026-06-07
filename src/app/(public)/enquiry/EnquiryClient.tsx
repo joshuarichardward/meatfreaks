@@ -599,6 +599,7 @@ export default function EnquiryClient() {
                       type="text"
                       className={`input${errors.name ? ' err' : ''}`}
                       autoComplete="name"
+                      maxLength={200}
                       value={name}
                       onChange={e => { setName(e.target.value); setErrors(er => ({ ...er, name: undefined })) }}
                       style={errors.name ? { borderColor: 'var(--red)' } : {}}
@@ -617,6 +618,7 @@ export default function EnquiryClient() {
                         type="email"
                         className={`input${errors.email ? ' err' : ''}`}
                         autoComplete="email"
+                        maxLength={200}
                         value={email}
                         onChange={e => { setEmail(e.target.value); setErrors(er => ({ ...er, email: undefined })) }}
                         style={errors.email ? { borderColor: 'var(--red)' } : {}}
@@ -630,6 +632,7 @@ export default function EnquiryClient() {
                         type="tel"
                         className="input"
                         autoComplete="tel"
+                        maxLength={50}
                         value={phone}
                         onChange={e => setPhone(e.target.value)}
                       />
@@ -677,6 +680,7 @@ export default function EnquiryClient() {
                     <textarea
                       id="enq-notes"
                       className="textarea"
+                      maxLength={5000}
                       rows={5}
                       value={notes}
                       onChange={e => setNotes(e.target.value)}

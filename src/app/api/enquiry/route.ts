@@ -7,13 +7,16 @@ import { enquiryLimiter, getIP } from '@/lib/rate-limit'
 const VALID_EVENT_TYPES = ['party', 'wedding', 'corporate', 'festival', 'other']
 
 export async function POST(req: Request) {
-  // Rate limit by IP (only when KV is available)
+  // Rate limit by IP — fail closed if KV is unavailable in production
   if (process.env.KV_REST_API_URL) {
     const ip = getIP(req)
     const { success } = await enquiryLimiter.limit(ip)
     if (!success) {
       return NextResponse.json({ error: 'Too many requests. Please try again later.' }, { status: 429 })
     }
+  } else if (process.env.NODE_ENV === 'production') {
+    console.error('Rate limiting unavailable: KV_REST_API_URL not set')
+    return NextResponse.json({ error: 'Service temporarily unavailable.' }, { status: 503 })
   }
 
   let body: Record<string, unknown>
@@ -36,8 +39,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
   }
 
-  // Validate email format
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  // Validate email format and reject header injection attempts
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || /[\r\n]/.test(email)) {
     return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
   }
 
@@ -60,7 +63,7 @@ export async function POST(req: Request) {
 
   // Destructure only known fields — never spread untrusted input
   const stored: StoredEnquiry = {
-    id: `enq_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+    id: crypto.randomUUID(),
     lane: typeof body.lane === 'string' ? body.lane as StoredEnquiry['lane'] : null,
     eventType: eventType as StoredEnquiry['eventType'],
     date: typeof body.date === 'string' ? body.date : null,

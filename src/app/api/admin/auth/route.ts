@@ -10,13 +10,16 @@ import {
 import { authLimiter, getIP } from '@/lib/rate-limit'
 
 export async function POST(request: NextRequest) {
-  // Rate limit by IP (only when KV is available)
+  // Rate limit by IP — fail closed if KV is unavailable in production
   if (process.env.KV_REST_API_URL) {
     const ip = getIP(request)
     const { success } = await authLimiter.limit(ip)
     if (!success) {
       return NextResponse.json({ message: 'If that email is authorised, a login link has been sent.' })
     }
+  } else if (process.env.NODE_ENV === 'production') {
+    console.error('Rate limiting unavailable: KV_REST_API_URL not set')
+    return NextResponse.json({ message: 'If that email is authorised, a login link has been sent.' })
   }
 
   let body: Record<string, unknown>

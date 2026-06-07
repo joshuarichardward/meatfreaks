@@ -98,10 +98,13 @@ export async function getEnquiries(): Promise<StoredEnquiry[]> {
   return readEnquiriesFromFile()
 }
 
+const MAX_ENQUIRIES = 500
+
 export async function storeEnquiry(payload: StoredEnquiry): Promise<void> {
   if (useKV()) {
     const enquiries = await getEnquiries()
     enquiries.unshift(payload)
+    if (enquiries.length > MAX_ENQUIRIES) enquiries.length = MAX_ENQUIRIES
     await kv.set('enquiries', enquiries)
   } else {
     const enquiries = readEnquiriesFromFile()
